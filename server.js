@@ -1,9 +1,13 @@
 const express = require('express');
+// const router = require('./route')
 const {
   nanoid
 } = require('nanoid')
 
+// router(app)
+
 const app = express();
+app.use(express.static('public'))
 app.use(express.json());
 
 const persons = []
@@ -41,10 +45,9 @@ app.get('/persons/:id?', (req, res) => {
 
   if (!id) {
     let query = req.query;
-    if (!(Object.keys(query).length === 0)) {
+    if (Object.keys(query).length) {
       for (const queryEl in query) {
-        const element = query[queryEl];
-        let filterdUser = persons.filter(person => person[queryEl] === element)
+        let filterdUser = persons.filter(person => person[queryEl] === query[queryEl])
         res.send(filterdUser)
         return
       }

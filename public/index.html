@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <h1 class="title">Persons</h1>
+  <div class="wrap">
+    <div class="form-wrap">
+      <h2>add person</h2>
+      <form class="form" id="form">
+        <input type="text" name="firstName" id="first-name" placeholder="first name">
+        <input type="text" name="lastName" id="last-name" placeholder="last name">
+        Color-eye<input type="color" name="eyeColor" id="color-eye">
+          <input type="text" name="age" id="age" placeholder="age">
+          <select name="city" id="select">
+            <option value="jerusalem">jerusalem</option>
+            <option value="tel-aviv">tel-aviv</option>
+            <option value="telem">telem</option>
+            <option value="holon">holon</option>
+          </select>
+          <input type="submit" value="Add">
+        </form>
+    </div>
+    <div class="list-wrap">
+      <h2>list</h2>
+      <ul id="list" class="list">
+      </ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
